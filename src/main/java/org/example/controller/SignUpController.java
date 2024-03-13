@@ -4,6 +4,12 @@ import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class SignUpController {
 
@@ -17,13 +23,21 @@ public class SignUpController {
     private JFXPasswordField txtSignPassword;
 
     @FXML
-    void btnLoginSignUpPage(ActionEvent event) {
+    private AnchorPane root;
 
+    @FXML
+    void btnLoginSignUpPage() throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/loginForm.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage =(Stage)root.getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("Login Page");
+        stage.centerOnScreen();
     }
 
     @FXML
-    void btnSignCreateAccount(ActionEvent event) {
-
+    void btnSignCreateAccount(ActionEvent event) throws IOException {
+            btnLoginSignUpPage();
     }
 
 }
