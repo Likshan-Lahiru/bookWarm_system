@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="542.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.SignUpController">
+   <children>
+      <ImageView fitHeight="552.0" fitWidth="813.0" layoutX="-10.0" layoutY="-8.0">
+         <image>
+            <Image url="@../assests/signup.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="168.0" layoutY="-61.0" prefHeight="483.0" prefWidth="446.0" style="-fx-background-radius: 30; -fx-background-color: white;">
+         <children>
+            <JFXTextField focusColor="BLACK" layoutX="47.0" layoutY="165.0" prefHeight="25.0" prefWidth="352.0" promptText="  Name" />
+            <JFXTextField focusColor="BLACK" layoutX="47.0" layoutY="237.0" prefHeight="25.0" prefWidth="352.0" promptText="  Email" />
+            <JFXPasswordField focusColor="BLACK" layoutX="47.0" layoutY="309.0" prefHeight="25.0" prefWidth="352.0" promptText="  Password" />
+            <JFXButton layoutX="150.0" layoutY="368.0" prefHeight="25.0" prefWidth="147.0" style="-fx-background-radius: 5; -fx-background-color: #4361ee;" text="Create Your Account " textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="137.0" layoutY="415.0" prefHeight="17.0" prefWidth="132.0" text="If you have an account?" />
+            <JFXButton buttonType="RAISED" layoutX="261.0" layoutY="413.0" prefHeight="25.0" prefWidth="59.0" text="Login In" textFill="#ff7474" />
+            <Label layoutX="118.0" layoutY="97.0" prefHeight="27.0" prefWidth="194.0" text="Create Your Account">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
