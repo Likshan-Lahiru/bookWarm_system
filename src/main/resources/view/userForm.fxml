@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="root" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UserController">
+   <children>
+      <TableView layoutX="497.0" layoutY="150.0" prefHeight="406.0" prefWidth="644.0">
+        <columns>
+          <TableColumn prefWidth="157.0" text="Book Id" />
+          <TableColumn prefWidth="229.0" text="Book Name" />
+            <TableColumn minWidth="0.0" prefWidth="116.0" text="Avalible" />
+        </columns>
+      </TableView>
+      <JFXTextField layoutX="871.0" layoutY="77.0" prefHeight="25.0" prefWidth="266.0" promptText="  Search book name" />
+   </children>
+</AnchorPane>

@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
@@ -14,6 +15,8 @@ import java.io.IOException;
 public class LoginControlller {
 
     @FXML
+    private JFXComboBox cmbSelect;
+    @FXML
     private JFXPasswordField txtLoginPagePassword;
 
     @FXML
@@ -21,6 +24,11 @@ public class LoginControlller {
 
     @FXML
     private AnchorPane root;
+
+    public void initialize() {
+
+        cmbSelect.getItems().addAll("Admin", "User");
+    }
 
     @FXML
     void btnLoginOnAction(ActionEvent event) {
