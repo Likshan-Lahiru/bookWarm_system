@@ -82,7 +82,7 @@ public class LoginControlller {
                     return;
                 }else {
                     if (search.getPassword().equals(passwordText)) {
-                        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/userForms/userMainForm.fxml"));
+                        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/admin/adminMainForm.fxml"));
                         Scene scene = new Scene(anchorPane);
                         Stage stage =(Stage)root1.getScene().getWindow();
                         stage.setScene(scene);

@@ -52,6 +52,6 @@
                </children>
             </Pane>
          </children></AnchorPane>
-      <AnchorPane fx:id="mainPain" layoutX="312.0" layoutY="19.0" prefHeight="715.0" prefWidth="855.0" style="-fx-background-color: gray;" />
+      <AnchorPane fx:id="mainPain" layoutX="312.0" layoutY="19.0" prefHeight="715.0" prefWidth="877.0" style="-fx-background-color: gray;" />
    </children>
 </AnchorPane>
