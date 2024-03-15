@@ -13,7 +13,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class LoginControlller {
-
+    @FXML
+    private AnchorPane root1;
     @FXML
     private JFXComboBox cmbSelect;
     @FXML
@@ -32,23 +33,23 @@ public class LoginControlller {
 
     @FXML
     void btnLoginOnAction(ActionEvent event) throws IOException {
-        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/userForm.fxml"));
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/userForms/userMainForm.fxml"));
         Scene scene = new Scene(anchorPane);
-        Stage stage =(Stage)root.getScene().getWindow();
+        Stage stage =(Stage)root1.getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("SignUp Page");
         stage.centerOnScreen();
     }
+
 
     @FXML
-    void btnSignUpOnAction(ActionEvent event) throws IOException {
+    public void btnSign(ActionEvent actionEvent) throws IOException {
         AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/signUpForm.fxml"));
         Scene scene = new Scene(anchorPane);
-        Stage stage =(Stage)root.getScene().getWindow();
+        Stage stage =(Stage)root1.getScene().getWindow();
         stage.setScene(scene);
         stage.setTitle("SignUp Page");
         stage.centerOnScreen();
     }
-
 }
 

@@ -7,21 +7,21 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UserController">
+<AnchorPane fx:id="root" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UserMainController">
    <children>
       <AnchorPane layoutX="18.0" layoutY="19.0" prefHeight="715.0" prefWidth="280.0" style="-fx-background-color: gray;">
          <children>
-            <JFXButton layoutX="30.0" layoutY="275.0" prefHeight="27.0" prefWidth="230.0" text="Dash Board">
+            <JFXButton layoutX="30.0" layoutY="275.0" onAction="#btnDashBoardOnAction" prefHeight="27.0" prefWidth="230.0" text="Dash Board">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="31.0" layoutY="340.0" prefHeight="27.0" prefWidth="230.0" text="Book Menu">
+            <JFXButton layoutX="31.0" layoutY="340.0" onAction="#btnBookMenuOnAction" prefHeight="27.0" prefWidth="230.0" text="Book Menu">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="31.0" layoutY="409.0" prefHeight="27.0" prefWidth="230.0" text="My Libraray">
+            <JFXButton layoutX="31.0" layoutY="409.0" onAction="#btnMyLibraryOnAction" prefHeight="27.0" prefWidth="230.0" text="My Libraray">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
@@ -31,7 +31,7 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="27.0" layoutY="642.0" prefHeight="27.0" prefWidth="230.0" text="Log Out">
+            <JFXButton layoutX="27.0" layoutY="642.0" onAction="#btnLogOutOnAction" prefHeight="27.0" prefWidth="230.0" text="Log Out">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
@@ -41,12 +41,12 @@
                   <JFXButton layoutX="160.0" layoutY="-4.0" prefHeight="34.0" prefWidth="38.0" text="." />
                   <ImageView fitHeight="171.0" fitWidth="162.0" layoutX="16.0" layoutY="10.0">
                      <image>
-                        <Image url="@../assests/icons8-user-80.png" />
+                        <Image url="@../../assests/icons8-user-80.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="24.0" fitWidth="35.0" layoutX="148.0" layoutY="18.0">
                      <image>
-                        <Image url="@../assests/icons8-hamburger-button-100.png" />
+                        <Image url="@../../assests/icons8-hamburger-button-100.png" />
                      </image>
                   </ImageView>
                </children>
