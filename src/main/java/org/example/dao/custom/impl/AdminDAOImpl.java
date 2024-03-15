@@ -1,7 +1,9 @@
 package org.example.dao.custom.impl;
 
 import org.example.config.FactoryConfiguration;
+import org.example.dao.DAOFactory;
 import org.example.dao.custom.AdminDAO;
+import org.example.dto.AdminDTO;
 import org.example.entity.Admin;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -10,6 +12,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class AdminDAOImpl implements AdminDAO {
+
     @Override
     public boolean save(Admin ent) throws SQLException, ClassNotFoundException {
         Session session = FactoryConfiguration.getInstance().getSession();
@@ -32,7 +35,12 @@ public class AdminDAOImpl implements AdminDAO {
 
     @Override
     public Admin search(String id) throws SQLException, ClassNotFoundException {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        Admin admin = session.get(Admin.class, id);
+        transaction.commit();
+        session.close();
+        return admin;
     }
 
     @Override

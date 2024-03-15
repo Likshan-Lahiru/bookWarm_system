@@ -32,7 +32,12 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public User search(String id) throws SQLException, ClassNotFoundException {
-        return null;
+        Session session = FactoryConfiguration.getInstance().getSession();
+        Transaction transaction = session.beginTransaction();
+        User user = session.get(User.class, id);
+        transaction.commit();
+        session.close();
+        return user;
     }
 
     @Override

@@ -28,7 +28,13 @@ public class AdminBOImpl implements AdminBO {
 
     @Override
     public AdminDTO search(String id) throws SQLException, ClassNotFoundException {
-        return null;
+        Admin search = adminDaoImpl.search(id);
+
+        if (search == null) {
+            return null;
+        } else {
+            return new AdminDTO(search.getName(),search.getEmail(),search.getTelephone(),search.getPassword());
+        }
     }
 
     @Override

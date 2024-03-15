@@ -36,7 +36,13 @@ public class UserBOImpl implements UserBO {
 
     @Override
     public UserDTO search(String id) throws SQLException, ClassNotFoundException {
-        return null;
+        User search = userDaoImpl.search(id);
+
+        if (search == null){
+            return null;
+        } else {
+            return new UserDTO(search.getName(), search.getEmail(), search.getPassword(),search.getTelephone(), new BranchDTO(search.getBranch().getId(), search.getBranch().getLocation(), search.getBranch().getTelephone(), search.getBranch().getEmail(), search.getBranch().getAddress()));
+        }
     }
 
     @Override
