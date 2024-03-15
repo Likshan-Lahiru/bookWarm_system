@@ -31,8 +31,13 @@ public class LoginControlller {
     }
 
     @FXML
-    void btnLoginOnAction(ActionEvent event) {
-
+    void btnLoginOnAction(ActionEvent event) throws IOException {
+        AnchorPane anchorPane = FXMLLoader.load(getClass().getResource("/view/userForm.fxml"));
+        Scene scene = new Scene(anchorPane);
+        Stage stage =(Stage)root.getScene().getWindow();
+        stage.setScene(scene);
+        stage.setTitle("SignUp Page");
+        stage.centerOnScreen();
     }
 
     @FXML
