@@ -106,6 +106,13 @@ public class BranchManageController {
 
     @FXML
     void btnBranchEditOnAction(ActionEvent event) {
+        txtBranchId.clear();
+        txtLocation.clear();
+        txtTele.clear();
+        txtEmail.clear();
+        txtAddress.clear();
+        cmbBrancheSelect.getItems().clear();
+
 
     }
 

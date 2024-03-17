@@ -40,7 +40,7 @@
             <Font name="Arial Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="598.0" layoutY="605.0" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #ef233c;" text="Delete">
+      <JFXButton buttonType="RAISED" layoutX="598.0" layoutY="605.0" onAction="#btnBranchDeleteOnAction" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #ef233c;" text="Delete">
          <font>
             <Font name="Arial Bold" size="15.0" />
          </font>
