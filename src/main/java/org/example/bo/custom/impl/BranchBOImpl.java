@@ -16,22 +16,28 @@ public class BranchBOImpl implements BranchBO {
 
     @Override
     public boolean save(BranchDTO dto) throws SQLException, ClassNotFoundException {
-        return false;
+        return branchDaoImpl.save(new Branch(dto.getId(),dto.getLocation(),dto.getTelephone(),dto.getEmail(),dto.getAddress(),null, null));
     }
 
     @Override
     public boolean update(BranchDTO dto) throws SQLException, ClassNotFoundException {
-        return false;
+        return branchDaoImpl.update(new Branch(dto.getId(),dto.getLocation(),dto.getTelephone(),dto.getEmail(),dto.getAddress(),null,   null));
     }
 
     @Override
     public boolean delete(String id) throws SQLException, ClassNotFoundException {
-        return false;
+        return branchDaoImpl.delete(id);
     }
 
     @Override
     public BranchDTO search(String id) throws SQLException, ClassNotFoundException {
-        return null;
+        Branch search = branchDaoImpl.search(id);
+
+        if (search == null) {
+            return null;
+        } else {
+            return new BranchDTO(search.getId(),search.getLocation(),search.getTelephone(),search.getEmail(),search.getAddress());
+        }
     }
 
     @Override
@@ -51,12 +57,12 @@ public class BranchBOImpl implements BranchBO {
 
     @Override
     public String generateNextId() throws SQLException, ClassNotFoundException {
-        return null;
+        return branchDaoImpl.generateNextId();
     }
 
     @Override
-    public BranchDTO searchByLocation(String location) throws SQLException, ClassNotFoundException {
+    public BranchDTO searchByLocation(String location) throws SQLException, ClassNotFoundException{
         Branch branch = branchDaoImpl.searchByLocation(location);
-        return new BranchDTO(branch.getId(), branch.getLocation(), branch.getTelephone(), branch.getEmail(), branch.getAddress());
+        return new BranchDTO(branch.getId(),branch.getLocation(),branch.getTelephone(),branch.getEmail(),branch.getAddress());
     }
 }

@@ -1,4 +1,4 @@
-package org.example.controller;
+package org.example.controller.registerController;
 
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXPasswordField;

@@ -5,7 +5,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane fx:id="root" prefHeight="715.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.UserDashController">
+<AnchorPane fx:id="root" prefHeight="715.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.userController.UserDashController">
    <children>
       <Label alignment="CENTER" layoutX="294.0" layoutY="74.0" prefHeight="42.0" prefWidth="253.0" text="User Dash Baord">
          <font>
