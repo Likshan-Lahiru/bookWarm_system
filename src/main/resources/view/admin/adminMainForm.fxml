@@ -9,26 +9,64 @@
 
 <AnchorPane fx:id="root" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.adminController.AdminMainController">
    <children>
-      <AnchorPane layoutX="15.0" layoutY="18.0" prefHeight="715.0" prefWidth="280.0" style="-fx-background-color: grey;">
+      <ImageView fitHeight="750.0" fitWidth="1200.0">
+         <image>
+            <Image url="@../../assests/adminBackground.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="15.0" layoutY="18.0" opacity="0.82" prefHeight="715.0" prefWidth="280.0" style="-fx-background-color: white;">
          <children>
-            <JFXButton alignment="CENTER" layoutX="17.0" layoutY="299.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#btnBookOnAction" prefHeight="44.0" prefWidth="222.0" text="Book">
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="28.0" layoutY="327.0" onAction="#btnBookOnAction" prefHeight="44.0" prefWidth="222.0" style="-fx-background-color: grey;" text="Books" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="17.0" />
-               </font></JFXButton>
-            <JFXButton alignment="CENTER" layoutX="17.0" layoutY="375.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#btnBrancherOnAction" prefHeight="44.0" prefWidth="222.0" text="Branches">
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0">
+                     <image>
+                        <Image url="@../../assests/icons8-books-100.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="28.0" layoutY="397.0" onAction="#btnBrancherOnAction" prefHeight="44.0" prefWidth="222.0" style="-fx-background-color: grey;" text="Branches" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="17.0" />
-               </font></JFXButton>
-            <JFXButton alignment="CENTER" layoutX="17.0" layoutY="454.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#btnUserOnAction" prefHeight="44.0" prefWidth="222.0" text="Users">
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0">
+                     <image>
+                        <Image url="@../../assests/icons8-branches-100%20(1).png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="31.0" layoutY="467.0" onAction="#btnUserOnAction" prefHeight="44.0" prefWidth="222.0" style="-fx-background-color: grey;" text="Users" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="17.0" />
-               </font></JFXButton>
-            <JFXButton layoutX="5.0" layoutY="622.0" onAction="#btnLogOutOnAction" prefHeight="44.0" prefWidth="270.0" text="Log Out">
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0">
+                     <image>
+                        <Image url="@../../assests/icons8-users-90.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <JFXButton layoutX="18.0" layoutY="622.0" onAction="#btnLogOutOnAction" prefHeight="44.0" prefWidth="248.0" style="-fx-background-color: #ffb703;" text="Log Out">
                <font>
                   <Font name="Arial Bold" size="16.0" />
                </font></JFXButton>
+            <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="27.0" layoutY="268.0" onAction="#btnDashBoardOnAction" prefHeight="44.0" prefWidth="222.0" style="-fx-background-color: grey;" text="Dash Board" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="33.0" fitWidth="33.0">
+                     <image>
+                        <Image url="@../../assests/icons8-dashboard-64.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
          </children></AnchorPane>
-      <AnchorPane fx:id="MainRoot" layoutX="310.0" layoutY="18.0" prefHeight="715.0" prefWidth="877.0" style="-fx-background-color: grey;" />
+      <AnchorPane fx:id="MainRoot" layoutX="310.0" layoutY="18.0" opacity="0.79" prefHeight="715.0" prefWidth="877.0" style="-fx-background-color: white;" />
       <Pane layoutX="50.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20;">
          <children>
             <JFXButton layoutX="160.0" layoutY="-4.0" prefHeight="34.0" prefWidth="38.0" text="." />

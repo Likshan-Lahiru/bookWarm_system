@@ -22,7 +22,7 @@ public class UserMainController {
 
     @FXML
     void btnBookMenuOnAction(ActionEvent event) throws IOException {
-        Parent node = FXMLLoader.load(this.getClass().getResource("/view/userForms/user_dash_board.fxml"));
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/userForms/book_form.fxml"));
 
         this.mainPain.getChildren().clear();
         this.mainPain.getChildren().add(node);

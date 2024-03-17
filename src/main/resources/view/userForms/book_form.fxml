@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="715.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.userController.BookController">
+   <children>
+      <Pane layoutX="7.0" layoutY="69.0" prefHeight="172.0" prefWidth="481.0" style="-fx-background-color: #ffff; -fx-background-radius: 10; -fx-border-color: black;">
+         <children>
+            <Label layoutX="20.0" layoutY="14.0" prefHeight="17.0" prefWidth="130.0" text="Like Book">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="72.0" prefHeight="18.0" prefWidth="89.0" text="Book ID         :-">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="109.0" prefHeight="18.0" prefWidth="89.0" text="Book Name :-">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="147.0" prefHeight="18.0" prefWidth="89.0" text="return Before :-">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBorrowBookId" layoutX="120.0" layoutY="73.0" prefHeight="17.0" prefWidth="89.0" text="B001" />
+            <Label fx:id="lblBorrowBookName" layoutX="120.0" layoutY="110.0" prefHeight="17.0" prefWidth="89.0" text="madolsima" />
+            <Label fx:id="lblBorrowBookReturnDate" layoutX="120.0" layoutY="148.0" prefHeight="17.0" prefWidth="89.0" text="21-03-2024" />
+            <JFXButton buttonType="RAISED" layoutX="369.0" layoutY="127.0" onAction="#btnAddOnAction" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: Yellow;" text="Add">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="tblBook" layoutX="7.0" layoutY="290.0" prefHeight="341.0" prefWidth="481.0">
+         <columns>
+            <TableColumn prefWidth="105.0" text="Book ID" />
+            <TableColumn prefWidth="115.0" text="Book Name" />
+            <TableColumn prefWidth="131.0" text="Author" />
+            <TableColumn prefWidth="129.0" text="Genre" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtSearch" layoutX="589.0" layoutY="29.0" prefHeight="27.0" prefWidth="206.0" />
+      <JFXButton buttonType="RAISED" layoutX="795.0" layoutY="29.0" onAction="#btnSearchOnAction" style="-fx-background-color: #7bf1a8;" text="Search">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXComboBox fx:id="cmbBranch" layoutX="460.0" layoutY="29.0" prefHeight="27.0" prefWidth="116.0" promptText="  Branches" />
+      <Pane layoutX="497.0" layoutY="69.0" prefHeight="563.0" prefWidth="359.0" style="-fx-border-color: black;">
+         <children>
+            <JFXTextField fx:id="txtBorrowId" layoutX="144.0" layoutY="81.0" prefHeight="27.0" prefWidth="206.0" />
+            <JFXTextField fx:id="txtbookId" layoutX="144.0" layoutY="142.0" prefHeight="27.0" prefWidth="206.0" />
+            <JFXTextField fx:id="txtEmail" layoutX="144.0" layoutY="200.0" prefHeight="27.0" prefWidth="206.0" />
+            <JFXTextField fx:id="txtBookName" layoutX="144.0" layoutY="261.0" prefHeight="27.0" prefWidth="206.0" />
+            <JFXTextField fx:id="txtBranchLoaction" layoutX="144.0" layoutY="320.0" prefHeight="27.0" prefWidth="206.0" />
+            <JFXTextField fx:id="txtBorrwingDate" layoutX="144.0" layoutY="376.0" prefHeight="27.0" prefWidth="206.0" />
+            <JFXTextField fx:id="txttReturnDate" layoutX="144.0" layoutY="439.0" prefHeight="27.0" prefWidth="206.0" />
+            <Label layoutX="11.0" layoutY="86.0" prefHeight="26.0" prefWidth="123.0" text="Borrow Id          :-" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="201.0" prefHeight="26.0" prefWidth="123.0" text="User Email        :-" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="149.0" prefHeight="26.0" prefWidth="123.0" text="Book ID             :-" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="262.0" prefHeight="26.0" prefWidth="123.0" text="Book Name       :-" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="321.0" prefHeight="26.0" prefWidth="130.0" text="Branch location  :-" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtBrrrowingDate" layoutX="8.0" layoutY="377.0" prefHeight="26.0" prefWidth="130.0" text="Borrowin Date      :-" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtReturnDate" layoutX="11.0" layoutY="440.0" prefHeight="26.0" prefWidth="130.0" text="Return Date           :-" textAlignment="CENTER" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="235.0" layoutY="511.0" onAction="#borrowOnAction" prefHeight="26.0" prefWidth="116.0" style="-fx-background-color: #0077b6;" text="Take Book">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

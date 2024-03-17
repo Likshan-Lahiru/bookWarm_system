@@ -9,12 +9,16 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class AdminMainController {
     @FXML
     private AnchorPane root;
     @FXML
     private AnchorPane MainRoot;
+    public void initialize() throws SQLException, ClassNotFoundException, IOException {
+        btnBookOnAction(new ActionEvent());
+    }
 
     @FXML
     void btnBrancherOnAction(ActionEvent event) throws IOException {
@@ -49,4 +53,6 @@ public class AdminMainController {
         this.MainRoot.getChildren().add(node);
     }
 
+    public void btnDashBoardOnAction(ActionEvent actionEvent) {
+    }
 }
