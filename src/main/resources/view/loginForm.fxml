@@ -45,6 +45,6 @@
       <Label layoutX="470.0" layoutY="403.0" prefHeight="17.0" prefWidth="139.0" text="Don't have an account?" />
       
       <JFXComboBox fx:id="cmbSelect" layoutX="408.0" layoutY="153.0" prefHeight="25.0" prefWidth="139.0" promptText="Select" />
-      <JFXButton buttonType="RAISED" layoutX="607.0" layoutY="398.0" onAction="#btnSign" text="Sign up" />
+      <JFXButton buttonType="RAISED" layoutX="594.0" layoutY="398.0" onAction="#btnSign" text="Sign up" textFill="#0051ff" />
    </children>
 </AnchorPane>

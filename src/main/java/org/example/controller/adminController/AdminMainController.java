@@ -17,7 +17,7 @@ public class AdminMainController {
     @FXML
     private AnchorPane MainRoot;
     public void initialize() throws SQLException, ClassNotFoundException, IOException {
-        btnBookOnAction(new ActionEvent());
+        btnDashBoardOnAction(null);
     }
 
     @FXML
@@ -53,6 +53,10 @@ public class AdminMainController {
         this.MainRoot.getChildren().add(node);
     }
 
-    public void btnDashBoardOnAction(ActionEvent actionEvent) {
+    public void btnDashBoardOnAction(ActionEvent actionEvent) throws IOException {
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/admin/dashBoard_forms.fxml"));
+
+        this.MainRoot.getChildren().clear();
+        this.MainRoot.getChildren().add(node);
     }
 }

@@ -30,7 +30,7 @@ public class UserMainController {
 
     @FXML
     void btnDashBoardOnAction(ActionEvent event) throws IOException {
-        Parent node = FXMLLoader.load(this.getClass().getResource("/view/userForms/user_dash_board.fxml"));
+        Parent node = FXMLLoader.load(this.getClass().getResource("/view/admin/dashBoard_forms.fxml"));
 
         this.mainPain.getChildren().clear();
         this.mainPain.getChildren().add(node);

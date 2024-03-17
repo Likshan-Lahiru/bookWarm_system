@@ -45,7 +45,7 @@
             </JFXButton>
          </children>
       </Pane>
-      <TableView fx:id="tblBook" layoutX="7.0" layoutY="290.0" prefHeight="341.0" prefWidth="481.0">
+      <TableView fx:id="tblBook" layoutX="7.0" layoutY="290.0" prefHeight="341.0" prefWidth="481.0" stylesheets="@../../style/table1.css">
          <columns>
             <TableColumn prefWidth="105.0" text="Book ID" />
             <TableColumn prefWidth="115.0" text="Book Name" />

@@ -31,12 +31,7 @@
                   <Font name="System Bold" size="17.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="34.0" layoutY="485.0" prefHeight="27.0" prefWidth="230.0" style="-fx-background-color: grey;" text="Button">
-               <font>
-                  <Font name="System Bold" size="17.0" />
-               </font>
-            </JFXButton>
-            <JFXButton layoutX="27.0" layoutY="642.0" onAction="#btnLogOutOnAction" prefHeight="27.0" prefWidth="230.0" style="-fx-background-color: #00b4d8;" text="Log Out">
+            <JFXButton layoutX="27.0" layoutY="642.0" onAction="#btnLogOutOnAction" prefHeight="27.0" prefWidth="230.0" style="-fx-background-color: #ffb703;" text="Log Out">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>

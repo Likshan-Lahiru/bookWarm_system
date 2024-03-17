@@ -14,7 +14,7 @@
             <Image url="@../../assests/adminBackground.jpg" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="15.0" layoutY="18.0" opacity="0.82" prefHeight="715.0" prefWidth="280.0" style="-fx-background-color: white;">
+      <AnchorPane layoutX="15.0" layoutY="18.0" opacity="0.82" prefHeight="715.0" prefWidth="280.0" style="-fx-background-color: white; -fx-background-radius: 20;">
          <children>
             <JFXButton alignment="BOTTOM_LEFT" buttonType="RAISED" layoutX="28.0" layoutY="327.0" onAction="#btnBookOnAction" prefHeight="44.0" prefWidth="222.0" style="-fx-background-color: grey;" text="Books" textAlignment="CENTER" textFill="WHITE">
                <font>
@@ -66,7 +66,7 @@
                </graphic>
             </JFXButton>
          </children></AnchorPane>
-      <AnchorPane fx:id="MainRoot" layoutX="310.0" layoutY="18.0" opacity="0.79" prefHeight="715.0" prefWidth="877.0" style="-fx-background-color: white;" />
+      <AnchorPane fx:id="MainRoot" layoutX="310.0" layoutY="18.0" opacity="0.79" prefHeight="715.0" prefWidth="877.0" style="-fx-background-color: white; -fx-background-radius: 20;" />
       <Pane layoutX="50.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20;">
          <children>
             <JFXButton layoutX="160.0" layoutY="-4.0" prefHeight="34.0" prefWidth="38.0" text="." />
