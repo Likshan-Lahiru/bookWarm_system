@@ -94,11 +94,30 @@ public class BookManageController {
 
     @FXML
     void btnBookDeleteOnAction(ActionEvent event) {
+        String text = txtBookId.getText();
+        try {
+            boolean delete = bookBOImpl.delete(text);
+            if (delete) {
+                new SystemAlert(Alert.AlertType.INFORMATION, "Success", "Book Deleted", ButtonType.OK).show();
+                loadtable();
+
+            } else {
+                new SystemAlert(Alert.AlertType.ERROR, "Error", "Book Not Deleted", ButtonType.OK).show();
+            }
+        }catch (Exception e){
+            new SystemAlert(Alert.AlertType.ERROR,"Error!","Something went wrong", ButtonType.OK).show();
+        }
 
     }
 
     @FXML
     void btnBookEditOnAction(ActionEvent event) {
+        txtBookId.clear();
+        txtBookName.clear();
+        txtBookAuthor.clear();
+        txtBookGnere.clear();
+        cmbBookStatus.getItems().clear();
+        cmbBranchSelector.getItems().clear();
 
     }
 
@@ -140,8 +159,33 @@ public class BookManageController {
     }
 
     @FXML
-    void btnBookUpdateOnAction(ActionEvent event) {
+    void btnBookUpdateOnAction(ActionEvent event) throws SQLException, ClassNotFoundException {
 
+        String bookIdText = txtBookId.getText();
+        String bookNameText = txtBookName.getText();
+        String bookAuthorText = txtBookAuthor.getText();
+        String bookGnereText = txtBookGnere.getText();
+        String bookStatusText = cmbBookStatus.getValue();
+        String bookBranchText = cmbBranchSelector.getValue();
+
+        if (bookBranchText.isEmpty()||bookIdText.isEmpty()||bookNameText.isEmpty()||bookAuthorText.isEmpty()||bookGnereText.isEmpty()||bookStatusText.isEmpty()) {
+            new SystemAlert(Alert.AlertType.ERROR, "Error", "Empty Field", ButtonType.OK).show();
+            return;
+        }
+        BranchDTO branchDTO = branchBOImpl.searchByLocation(bookBranchText);
+        BookDTO bookDTO = new BookDTO(bookIdText, bookNameText, bookAuthorText, bookGnereText, bookStatusText, branchDTO);
+        try {
+            boolean update = bookBOImpl.update(bookDTO);
+            if (update) {
+                new SystemAlert(Alert.AlertType.CONFIRMATION, "Success", "Updated", ButtonType.OK).show();
+                loadtable();
+                clearFields();
+                geneateNextId();
+            }
+
+        }catch (Exception e){
+            new SystemAlert(Alert.AlertType.ERROR,"Error!","Something went wrong", ButtonType.OK).show();
+        }
     }
 
 }

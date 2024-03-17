@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.adminController.AdminMainController">
+<AnchorPane fx:id="root" prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.adminController.AdminMainController">
    <children>
       <AnchorPane layoutX="15.0" layoutY="18.0" prefHeight="715.0" prefWidth="280.0" style="-fx-background-color: grey;">
          <children>
-            <JFXButton layoutX="53.0" layoutY="250.0" prefHeight="27.0" prefWidth="174.0" text="Home" />
-            <JFXButton layoutX="53.0" layoutY="309.0" onAction="#btnBookOnAction" prefHeight="27.0" prefWidth="174.0" text="Book" />
-            <JFXButton layoutX="53.0" layoutY="379.0" onAction="#btnBrancherOnAction" prefHeight="27.0" prefWidth="174.0" text="Branches" />
-            <JFXButton layoutX="53.0" layoutY="449.0" prefHeight="27.0" prefWidth="174.0" text="Users" />
+            <JFXButton alignment="CENTER" layoutX="17.0" layoutY="299.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#btnBookOnAction" prefHeight="44.0" prefWidth="222.0" text="Book">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font></JFXButton>
+            <JFXButton alignment="CENTER" layoutX="17.0" layoutY="375.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#btnBrancherOnAction" prefHeight="44.0" prefWidth="222.0" text="Branches">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font></JFXButton>
+            <JFXButton alignment="CENTER" layoutX="17.0" layoutY="454.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#btnUserOnAction" prefHeight="44.0" prefWidth="222.0" text="Users">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font></JFXButton>
+            <JFXButton layoutX="5.0" layoutY="622.0" onAction="#btnLogOutOnAction" prefHeight="44.0" prefWidth="270.0" text="Log Out">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font></JFXButton>
          </children></AnchorPane>
       <AnchorPane fx:id="MainRoot" layoutX="310.0" layoutY="18.0" prefHeight="715.0" prefWidth="877.0" style="-fx-background-color: grey;" />
+      <Pane layoutX="50.0" layoutY="45.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <JFXButton layoutX="160.0" layoutY="-4.0" prefHeight="34.0" prefWidth="38.0" text="." />
+            <ImageView fitHeight="171.0" fitWidth="162.0" layoutX="16.0" layoutY="10.0">
+               <image>
+                  <Image url="@../../assests/icons8-user-80.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="35.0" layoutX="148.0" layoutY="18.0">
+               <image>
+                  <Image url="@../../assests/icons8-hamburger-button-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

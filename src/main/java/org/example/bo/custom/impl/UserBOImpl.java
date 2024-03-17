@@ -47,7 +47,17 @@ public class UserBOImpl implements UserBO {
 
     @Override
     public List<UserDTO> getAll() throws SQLException, ClassNotFoundException {
-        return null;
+        List<User> all = userDaoImpl.getAll();
+        List<UserDTO> userDTOS = new ArrayList<>();
+
+        if (all == null) {
+            return null;
+        } else {
+            for (User user : all) {
+                userDTOS.add(new UserDTO(user.getName(), user.getEmail(), user.getPassword(),user.getTelephone(), new BranchDTO(user.getBranch().getId(), user.getBranch().getLocation(), user.getBranch().getTelephone(), user.getBranch().getEmail(), user.getBranch().getAddress())));
+            }
+            return userDTOS;
+        }
     }
 
     @Override

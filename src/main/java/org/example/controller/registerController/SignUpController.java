@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.bo.BOFactory;
@@ -17,6 +18,7 @@ import org.example.bo.custom.UserBO;
 import org.example.dto.AdminDTO;
 import org.example.dto.BranchDTO;
 import org.example.dto.UserDTO;
+import org.example.util.SystemAlert;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -78,22 +80,22 @@ public class SignUpController {
         System.out.print(typeValue);
 
         if (signNameText.isEmpty() || signEmailText.isEmpty() || signPasswordText.isEmpty() || rePassword.isEmpty() || ((String) typeValue).isEmpty() || txtTel.getText().isEmpty()) {
-            new Alert(Alert.AlertType.ERROR, "All fields are required").show();
+            new SystemAlert(Alert.AlertType.ERROR, "Error!", "Please Fill All Field", ButtonType.OK).show();
         } else if (!signPasswordText.equals(rePassword)) {
-            new Alert(Alert.AlertType.ERROR, "Password does not match").show();
+            new SystemAlert(Alert.AlertType.ERROR, "Error!", "Password Not Match", ButtonType.OK).show();
         } else {
 
             if (typeValue.equals("User")) {
                 if (cmbBranch.getValue() == null) {
-                    new Alert(Alert.AlertType.ERROR, "Please select branch").show();
+                    new SystemAlert(Alert.AlertType.ERROR, "Error!", "Please Select Branch", ButtonType.OK).show();
                 } else {
                     try {
                         BranchDTO branchDTO = branchBO.searchByLocation(cmbBranch.getValue());
                         boolean save = userBoImpl.save(new UserDTO(signNameText, signEmailText, signPasswordText, telText, branchDTO));
                         if (save){
-                            new Alert(Alert.AlertType.CONFIRMATION, "Register Complete").show();
+                            new SystemAlert(Alert.AlertType.INFORMATION, "Success", "User Created", ButtonType.OK).show();
                         }else {
-                            new Alert(Alert.AlertType.ERROR, "Register Failed").show();
+                            new SystemAlert(Alert.AlertType.ERROR,"Error!","Something went wrong", ButtonType.OK).show();
                         }
 
                     } catch (SQLException | ClassNotFoundException e) {
@@ -105,9 +107,9 @@ public class SignUpController {
                 try {
                     boolean save = adminBoImpl.save(new AdminDTO(signNameText, signEmailText, telText, signPasswordText));
                     if (save){
-                        new Alert(Alert.AlertType.CONFIRMATION, "Register Successful").show();
+                        new SystemAlert(Alert.AlertType.INFORMATION, "Success", "Admin Created", ButtonType.OK).show();
                     }else {
-                        new Alert(Alert.AlertType.ERROR, "Register Failed").show();
+                        new SystemAlert(Alert.AlertType.ERROR,"Error!","Something went wrong", ButtonType.OK).show();
                     }
 
                 } catch (Exception e) {
@@ -116,28 +118,6 @@ public class SignUpController {
             }
         }
 
-
-        /*if (signNameText.isEmpty() || signEmailText.isEmpty() || signPasswordText.isEmpty() || telText.isEmpty()) {
-            txtSignName.setStyle("-fx-border-color: red");
-            txtSignEmail.setStyle("-fx-border-color: red");
-            txtSignPassword.setStyle("-fx-border-color: red");
-            txtTel.setStyle("-fx-border-color: red");
-            return;
-        }else {
-            if (typeValue.equals("user")){
-                BranchDTO branchDTO = branchBO.searchByLocation(cmbBranch.getValue());
-                UserDTO userDTO = new UserDTO(signNameText, signEmailText, signPasswordText, Integer.parseInt(telText), branchDTO);
-                boolean save = userBoImpl.save(userDTO);
-                if (!save) {
-                    new Alert(Alert.AlertType.ERROR, "Something went wrong").show();
-                    return;
-                }
-                new Alert(Alert.AlertType.INFORMATION, "User Created Successfully").show();
-
-
-            }
-
-        }*/
 
 
 

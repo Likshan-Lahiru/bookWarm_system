@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.example.bo.BOFactory;
@@ -15,6 +16,7 @@ import org.example.bo.custom.AdminBO;
 import org.example.bo.custom.UserBO;
 import org.example.dto.AdminDTO;
 import org.example.dto.UserDTO;
+import org.example.util.SystemAlert;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -50,17 +52,14 @@ public class LoginControlller {
         System.out.print(value);
 
         if(txtLoginPageUser.getText().isEmpty() || txtLoginPagePassword.getText().isEmpty()){
-            new Alert(Alert.AlertType.ERROR, "Missing Information").show();
+            new SystemAlert(Alert.AlertType.ERROR,"Error!","Please Enter User Name and Password", ButtonType.OK).show();
             return;
         }else {
 
             if(value.equals("User")){
                 UserDTO search = userBoImpl.search(userText);
-                System.out.print(search.getPassword());
-                System.out.print(search.getName());
-                System.out.print("check");
                 if (search == null){
-                    new Alert(Alert.AlertType.ERROR, "User Not Found").show();
+                    new SystemAlert(Alert.AlertType.ERROR,"Error!","User Not Found", ButtonType.OK).show();
                     return;
                 }else {
                     if (search.getPassword().equals(passwordText)) {
@@ -71,7 +70,7 @@ public class LoginControlller {
                         stage.setTitle("SignUp Page");
                         stage.centerOnScreen();
                     } else {
-                        new Alert(Alert.AlertType.ERROR, "Invalid Password").show();
+                       new SystemAlert(Alert.AlertType.ERROR,"Error!","Invalid Password", ButtonType.OK).show();
                     }
                 }
             }else {
@@ -89,7 +88,7 @@ public class LoginControlller {
                         stage.setTitle("SignUp Page");
                         stage.centerOnScreen();
                     } else {
-                        new Alert(Alert.AlertType.ERROR, "Invalid Password").show();
+                        new SystemAlert(Alert.AlertType.ERROR,"Error!","Invalid Password", ButtonType.OK).show();
                     }
                 }
             }

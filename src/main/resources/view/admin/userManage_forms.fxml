@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="root" prefHeight="715.0" prefWidth="877.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.adminController.UserManageController">
+   <children>
+      <Label layoutX="353.0" layoutY="12.0" text="Manage users">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUserName" layoutX="123.0" layoutY="126.0" prefHeight="27.0" prefWidth="256.0" />
+      <JFXTextField fx:id="txtUserEmail" layoutX="123.0" layoutY="199.0" prefHeight="27.0" prefWidth="256.0" />
+      <JFXTextField fx:id="txtUserTele" layoutX="535.0" layoutY="126.0" prefHeight="27.0" prefWidth="256.0" />
+      <Label alignment="BASELINE_LEFT" layoutX="47.0" layoutY="129.0" prefHeight="22.0" prefWidth="63.0" text="Name :-">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="BASELINE_LEFT" layoutX="47.0" layoutY="202.0" prefHeight="22.0" prefWidth="63.0" text="Email :-">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label alignment="BASELINE_LEFT" layoutX="410.0" layoutY="129.0" prefHeight="22.0" prefWidth="115.0" text="Contatct NO :-">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmbUserBranchSelect" layoutX="410.0" layoutY="199.0" prefHeight="27.0" prefWidth="161.0" promptText="   Branch" />
+      <TableView fx:id="tblUser" layoutX="47.0" layoutY="268.0" prefHeight="314.0" prefWidth="749.0" stylesheets="@../../style/table.css">
+        <columns>
+          <TableColumn prefWidth="154.0" text="Name" />
+          <TableColumn prefWidth="177.0" text="Email" />
+            <TableColumn prefWidth="177.0" text="Contact No" />
+            <TableColumn prefWidth="240.0" text="Branch" />
+        </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="210.0" layoutY="615.0" onAction="#btnUserSaveOnAction" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #70e000;" text="Save">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="335.0" layoutY="615.0" onAction="#btnUserEditOnAction" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #219ebc;" text=" Clear">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="460.0" layoutY="615.0" onAction="#btnUserUpdateOnAction" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #ffd60a;" text="Update">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="608.0" layoutY="615.0" onAction="#btnUserDeleteOnAction" prefHeight="27.0" prefWidth="93.0" style="-fx-background-color: #ef233c;" text="Delete">
+         <font>
+            <Font name="Arial Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtuserSearchId" layoutX="560.0" layoutY="61.0" prefHeight="27.0" prefWidth="189.0" style="-fx-background-radius: 10;" />
+      <JFXButton buttonType="RAISED" layoutX="754.0" layoutY="61.0" onAction="#btnuserSearchOnAction" style="-fx-background-color: #FFFF;" text="Search" />
+   </children>
+</AnchorPane>
