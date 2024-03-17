@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.layout.AnchorPane?>
-
 
 <AnchorPane prefHeight="750.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controller.AdminMainController">
    <children>
-      <AnchorPane layoutX="15.0" layoutY="18.0" prefHeight="715.0" prefWidth="280.0" style="-fx-background-color: grey;" />
-      <AnchorPane layoutX="310.0" layoutY="18.0" prefHeight="715.0" prefWidth="877.0" style="-fx-background-color: grey;" />
+      <AnchorPane layoutX="15.0" layoutY="18.0" prefHeight="715.0" prefWidth="280.0" style="-fx-background-color: grey;">
+         <children>
+            <JFXButton layoutX="53.0" layoutY="250.0" prefHeight="27.0" prefWidth="174.0" text="Home" />
+            <JFXButton layoutX="53.0" layoutY="309.0" prefHeight="27.0" prefWidth="174.0" text="Book" />
+            <JFXButton layoutX="53.0" layoutY="379.0" onAction="#btnBrancherOnAction" prefHeight="27.0" prefWidth="174.0" text="Branches" />
+            <JFXButton layoutX="53.0" layoutY="449.0" prefHeight="27.0" prefWidth="174.0" text="Users" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="MainRoot" layoutX="310.0" layoutY="18.0" prefHeight="715.0" prefWidth="877.0" style="-fx-background-color: grey;" />
    </children>
 </AnchorPane>
